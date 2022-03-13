@@ -20,6 +20,9 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" {{ Source code version control }}
+Plug 'tpope/vim-fugitive'
+
 "{{ Tree-sitter }}
 Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
 
@@ -78,6 +81,9 @@ else
     set clipboard=unnamedplus
 endif
 
+" Place the text on the system clipboard to the cursor position
+inoremap <silent>  <S-Insert>  <C-R>+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Trim trailing whitespace from all lines in a file                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,7 +121,6 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
 
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme                                                                  "

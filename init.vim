@@ -19,6 +19,9 @@ call plug#begin('~/Appdata/Local/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" {{ Source code version control }}
+Plug 'tpope/vim-fugitive'
+
 "{{ Tree-sitter }}
 Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
 
@@ -68,6 +71,9 @@ if has('win32')
 else
     set clipboard=unnamedplus
 endif
+
+" Place the text on the system clipboard to the cursor position
+inoremap <silent>  <S-Insert>  <C-R>+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Trim trailing whitespace from all lines in a file                         "
