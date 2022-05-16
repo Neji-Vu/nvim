@@ -15,7 +15,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/Appdata/Local/nvim/plugged')
 
-"{{ Theme }}
+" {{ Theme }}
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -28,6 +28,17 @@ Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
 
 " {{ File browser - Nerd tree }}
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" {{ Terminal }}
+Plug 'voldikss/vim-floaterm'
+
+" {{ Auto pairs }}
+Plug 'jiangmiao/auto-pairs'
+
+" {{ Code intellisense }}
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
@@ -36,6 +47,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable GUI tabline and use TUI tabline
 GuiTabline 0
+" Set line space of code
+set linespace=1
 " Add numbers to each line on the left-hand side
 set number relativenumber
 " Highlight cursor line underneath the cursor horizontally
@@ -83,6 +96,10 @@ endif
 
 " Place the text on the system clipboard to the cursor position
 inoremap <silent>  <S-Insert>  <C-R>+
+
+" Close the curent bufer and move to the previous one
+" This replicates the idea of closing a tab
+nnoremap <leader>bq :bp <BAR> bd #<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Trim trailing whitespace from all lines in a file                         "
@@ -139,3 +156,5 @@ colorscheme gruvbox
 let nvim_settings_dir = '~\AppData\Local\nvim\settings\'
 execute 'source '.nvim_settings_dir.'airline.vim'
 execute 'source '.nvim_settings_dir.'nerdtree.vim'
+execute 'source '.nvim_settings_dir.'floaterm.vim'
+execute 'source '.nvim_settings_dir.'lspconfig.vim'

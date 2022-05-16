@@ -25,11 +25,17 @@ Plug 'tpope/vim-fugitive'
 "{{ Tree-sitter }}
 Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
 
+" {{ File browser - Nerd tree }}
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General settings                                                          "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set line space of code
+set linespace=1
 " Add numbers to each line on the left-hand side
 set number relativenumber
 " Highlight cursor line underneath the cursor horizontally

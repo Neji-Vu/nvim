@@ -1,5 +1,5 @@
 "Airline theme
-let g:airline_theme='base16_gruvbox_dark_pale'
+let g:airline_theme='base16_gruvbox_dark_medium'
 
 " Extensions
 " Tabline settings
@@ -7,7 +7,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
+"let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#formatter = 'default'
 let g:ariline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 1
@@ -47,5 +47,5 @@ let g:airline_symbols.colnr = ' c-'
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' r-'
 let g:airline_symbols.maxlinenr = ' '
-let g:airline_symbols.dirty='⚡'
+let g:airline_symbols.dirty=''
 let g:airline_symbols.notexists = 'Ɇ'
